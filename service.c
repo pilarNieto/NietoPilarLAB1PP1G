@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "service.h"
 
 int harcodearService(eServicio servicios[], int tamService, int quantity)

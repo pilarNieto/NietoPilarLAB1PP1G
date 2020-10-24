@@ -428,4 +428,17 @@ int isAlphaNumeric(char str[])
     return 1;
 }
 
+int validateService(eServicio servicios[], int tamServicio, int servicioParametro)
+{
+    int isFine = 0;
+        for (int i = 0; i < tamServicio; i++)
+    {
+        if (servicios[i].id == servicioParametro)
+        {
+            isFine = 1;
+            break;
+        }
+    }
+    return isFine;
+}
 

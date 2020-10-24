@@ -5,6 +5,33 @@
 #include "colors.h"
 #include "utn.h"
 
+//----------------------------> TEST CASE
+
+int harcodearCars(eAuto vehiculos[], int tamAutos, int quantity)
+{
+    int count;
+
+    eAuto list[] =
+    {
+        {7000, 300555, 1002, 5004, 2018, 0},
+        {7001, 403600, 1003, 5002, 1999, 0},
+        {7002, 899600, 1000, 5003, 2001, 0},
+        {7003, 552103, 1001, 5000, 1970, 0},
+        {7004, 325700, 1005, 5003, 2016, 0},
+        {7005, 830690, 1001, 5002, 2014, 0}
+    };
+    if (quantity <= 6 && tamAutos >= quantity)
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            vehiculos[i] = list[i];
+            count++;
+        }
+    }
+    return count;
+}
+
+
 void initializeCar(eAuto vehiculos[], int tamAutos)
 {
     for(int i = 0; i < tamAutos; i++)
@@ -73,7 +100,6 @@ int addCar(eAuto vehiculos[], int tamAutos, int idAuto, eMarcas marcas[], int ta
     else
     {
         printf("Ingrese la patente del vehiculo: \n");
-        fflush(stdin);
         scanf("%d", &auxPatente);
         //isAlphaNumerico
         while(!validatePatent(auxPatente))
@@ -84,28 +110,14 @@ int addCar(eAuto vehiculos[], int tamAutos, int idAuto, eMarcas marcas[], int ta
             scanf("%d", &auxPatente);
         }
         showBrandS(marcas, tamMarca);
-        //utn_getNumero(&auxIdMarca, "Ingrese por favor ID de la marca del auto", "Error, Reingrese", 999,1005,3);
-        printf("Ingrese el ID de la marca del vehiculo: ");
         fflush(stdin);
-        scanf("%d", &auxIdMarca);
+        utn_getNumero(&auxIdMarca, "Ingrese por favor modelo de la marca del auto:\n", "Error, Reingrese el ID:\n", 1000,1004,3);
 
-        while(!validateBrand(marcas, tamMarca, auxIdMarca))
-        {
-            printf("Marca ingresada incorrecta! Reingrese:\n");
-            fflush(stdin);
-            scanf("%d", &auxIdMarca);
-        }
+
         showColorS(colores, tamColor);
-        //utn_getNumero(auxIdColor, "Ingrese por favor ID del color", "Error, Reingrese", 999,1005,3);
-        printf("Ingrese el ID del color del vehiculo: ");
         fflush(stdin);
-        scanf("%d", &auxIdColor);
-        while(!validateColor(colores, tamColor, auxIdColor))
-        {
-            printf("Color ingresado incorrecta! Reingrese: ");
-            fflush(stdin);
-            scanf("%d", &auxIdColor);
-        }
+        utn_getNumero(&auxIdColor, "Ingrese por favor ID del color\n", "Error, Reingrese\n", 5000,5004,3);
+
         printf("Ingrese el anio de fabricacion del vehiculo (1930-2020): ");
         fflush(stdin);
         scanf("%d", &auxModelo);
@@ -119,6 +131,7 @@ int addCar(eAuto vehiculos[], int tamAutos, int idAuto, eMarcas marcas[], int ta
         printf("********EL ALTA DEL AUTO HA SIDO EXITOSA*******.\n");
         isFine = 1;
     }
+
 
     return isFine;
 }
@@ -182,7 +195,7 @@ int removeCar(eAuto vehiculos[], int tamAutos, eMarcas marcas[], int tamMarca, e
     printf("                         BAJA AUTO                     \n");
     printf("=====================================================\n\n");
     showCarS(vehiculos, tamAutos, marcas, tamMarca, color, tamColor);
-    printf("Ingrese el ID del vehiculo a remover:\n");
+    printf("Ingrese el ID del vehiculo a remover:\n");//CORREGIDO VALIDA ID
     fflush(stdin);
     scanf("%d", &auxIDAuto);
     indexCar = searchIDCarEnArray(vehiculos, tamAutos, auxIDAuto);
@@ -248,7 +261,7 @@ void modifyCar(eAuto vehiculos[], int tamAutos, eMarcas marcas[], int tamMarca, 
     {
         printf("ID AUTO   PATENTE     MARCA      COLOR   MODELO\n\n");
         showCar(vehiculos[index], marcas, tamMarca, color, tamColor);
-        //showMenuModify(option); verificar
+        // showMenuModify();
         printf("======================================================\n");
         printf("                    MENU DE MODIFICACIONES             \n");
         printf("=====================================================\n\n");
@@ -261,7 +274,7 @@ void modifyCar(eAuto vehiculos[], int tamAutos, eMarcas marcas[], int tamMarca, 
         switch(option)
         {
         case 1:
-            //utn_getNumero(auxColor,"Ingrese el ID del color", "Error. Reingrese el ID del color",4999,5005,3);
+
             showColorS(color, tamColor);
             printf("Ingrese el ID del nuevo color a modificar: ");
             fflush(stdin);
@@ -279,7 +292,7 @@ void modifyCar(eAuto vehiculos[], int tamAutos, eMarcas marcas[], int tamMarca, 
             }
             break;
         case 2:
-            //utn_getNumero(auxMarca,"Ingrese el ID de la marca", "Error. Reingrese el ID de la marca",999,1005,3);
+
             showBrandS(marcas, tamMarca);
             printf("******Ingrese el ID de la nueva marca*****\n");
             fflush(stdin);
@@ -332,28 +345,4 @@ void sortCars(eAuto vehiculos[], int tamAutos, eMarcas marcas[], int tamMarca, e
             }
         }
     }
-}
-//----------------------------------> HARCODEO DE PRUEBA
-int harcodearCars(eAuto vehiculos[], int tamAutos, int quantity)
-{
-    int count;
-
-    eAuto list[] =
-    {
-        {7000, 300555, 1002, 5004, 2018, 0},
-        {7001, 403600, 1003, 5002, 1999, 0},
-        {7002, 899600, 1000, 5003, 2001, 0},
-        {7003, 552103, 1001, 5000, 1970, 0},
-        {7004, 325700, 1005, 5003, 2016, 0},
-        {7005, 830690, 1001, 5002, 2014, 0}
-    };
-    if (quantity <= 6 && tamAutos >= quantity)
-    {
-        for (int i = 0; i < quantity; i++)
-        {
-            vehiculos[i] = list[i];
-            count++;
-        }
-    }
-    return count;
 }

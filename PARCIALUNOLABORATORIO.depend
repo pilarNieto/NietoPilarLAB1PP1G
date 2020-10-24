@@ -6,7 +6,16 @@
 	"utn.h"
 	"brand.h"
 
-1602870426 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\brand.h
+1603497858 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\utn.h
+	"vehiculo.h"
+	"brand.h"
+	"colors.h"
+	"service.h"
+	"job.h"
+
+1603495754 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\brand.h
+
+1603492303 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\colors.h
 
 1602824189 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\colors.c
 	<stdio.h>
@@ -14,22 +23,7 @@
 	<string.h>
 	"colors.h"
 
-1602871545 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\colors.h
-
-1602824190 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\service.c
-	<stdio.h>
-	<stdlib.h>
-	"service.h"
-
-1602829261 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\service.h
-
-1602887357 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\showmenuoptione.c
-	<stdio.h>
-	"showMenuOptione.h"
-
-1602887357 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\showmenuoptione.h
-
-1602824487 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\job.c
+1603413425 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\job.c
 	<stdio.h>
 	<stdlib.h>
 	"job.h"
@@ -39,21 +33,59 @@
 	"colors.h"
 	"utn.h"
 
-1602873702 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\job.h
+1603494699 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\job.h
 	"vehiculo.h"
 	"service.h"
 	"brand.h"
 	"colors.h"
 
-1602892371 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\vehiculo.h
+1603495754 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\vehiculo.h
 	"colors.h"
 	"brand.h"
 
-1602859529 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\utn.h
+1603494700 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\service.h
+
+1603497975 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"showMenuOptione.h"
+	"utn.h"
+	"vehiculo.h"
+	"colors.h"
+	"brand.h"
+	"service.h"
+	"job.h"
+
+1603495754 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\showmenuoptione.h
+	"utn.h"
+	"vehiculo.h"
 	"brand.h"
 	"colors.h"
+	"service.h"
+	"job.h"
 
-1602859912 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\utn.c
+1603333928 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\service.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"service.h"
+
+1603498037 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\showmenuoptione.c
+	<stdio.h>
+	"showMenuOptione.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"utn.h"
+	"reports.h"
+	"vehiculo.h"
+	"brand.h"
+	"colors.h"
+	"service.h"
+	"job.h"
+
+1603413426 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -62,7 +94,7 @@
 	"brand.h"
 	"colors.h"
 
-1602891272 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\vehiculo.c
+1603496596 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\vehiculo.c
 	<stdio.h>
 	<stdlib.h>
 	"vehiculo.h"
@@ -70,15 +102,19 @@
 	"colors.h"
 	"utn.h"
 
-1602851944 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\main.c
+1603413425 source:c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\reports.c
 	<stdio.h>
 	<stdlib.h>
-	<ctype.h>
-	"showMenuOptione.h"
-	"utn.h"
 	"vehiculo.h"
 	"colors.h"
 	"brand.h"
-	"service.h"
 	"job.h"
+	"service.h"
+
+1603494700 c:\users\admin\desktop\programaci”n 1\parcialunolaboratorio\parcialunolaboratorio\reports.h
+	"vehiculo.h"
+	"colors.h"
+	"brand.h"
+	"job.h"
+	"service.h"
 

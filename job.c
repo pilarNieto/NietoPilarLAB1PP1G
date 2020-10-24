@@ -7,6 +7,36 @@
 #include "colors.h"
 #include "utn.h"
 
+//-----------------> BONUS TRACK
+
+int harcodearJob(eTrabajo trabajos[], int tamTrabajo, int quantity)
+{
+    int count = 0;
+
+        eTrabajo list[] = {
+            {10001, 123456, 20000, {20,2,2020}},
+            {10005, 234567, 20003, {2,2,2018}},
+            {10004, 654321, 20002, {18,4,1993}},
+            {10003, 543210, 20001, {9,6,2018}},
+            {10015, 504205, 20003, {7,5,2016}},
+            {10022, 458796, 20003, {16,10,2000}},
+            {10042, 452169, 20003, {25,10,2017}},
+            {10052, 895627, 20004, {17,10,2014}},
+            {10012, 589369, 20003, {29,10,2010}},
+            {10010, 586968, 20000, {20,4,2020}}
+            };
+    if (quantity <= 10 && tamTrabajo >= quantity)
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            trabajos[i] = list[i];
+            count++;
+        }
+    }
+    return count;
+}
+
+
 int addJob(eTrabajo trabajo[], int tamTrabajo, eAuto autos[], int tamAutos, eServicio servicios[], int tamService, eMarcas marcas[], int tamMarcas, eColor colores[], int tamColores, int idTrabajo)
 {
     int isFine = 0;

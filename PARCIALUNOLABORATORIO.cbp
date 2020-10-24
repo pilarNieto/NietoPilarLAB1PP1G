@@ -46,6 +46,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="reports.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="reports.h" />
 		<Unit filename="service.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -18,7 +18,7 @@ typedef struct
 
 
 int harcodearCars(eAuto vehiculos[], int tamAuto, int cantidad);
-/** \brief load six cars whit their respectiveparameters:
+/** \brief load six cars whit their respective parameters:
  *
  * \param vehiculos[] eAuto
  * \param tamAuto int
@@ -27,7 +27,7 @@ int harcodearCars(eAuto vehiculos[], int tamAuto, int cantidad);
  * \param tamMarca int
  * \param colores[] eColor
  * \param tamColor int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int addCar(eAuto vehiculos[], int tamAuto, int idAuto, eMarcas marcas[], int tamMarca, eColor colores[], int tamColor);
@@ -37,7 +37,7 @@ int addCar(eAuto vehiculos[], int tamAuto, int idAuto, eMarcas marcas[], int tam
  *
  * \param vehiculos[] eAuto
  * \param tamAuto int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int searchFree(eAuto vehiculos[], int tamAuto);
@@ -46,7 +46,7 @@ int searchFree(eAuto vehiculos[], int tamAuto);
  *
  * \param vehiculos[] eAuto
  * \param tamAuto int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int checkAuto(eAuto vehiculos[], int tamAuto);
@@ -57,7 +57,7 @@ int checkAuto(eAuto vehiculos[], int tamAuto);
  *
  * \param Pointer to array of employees
  * \ param len int Array length
- * \ return int Return (1) if Error [Invalid length or NULL pointer] - (0) if Ok
+ * \ return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 
@@ -78,7 +78,7 @@ void initializeCar(eAuto vehiculos[], int tamAutos);
  * \param tamMarca int
  * \param colores[] eColor
  * \param tamColor int
- * \return void
+ * \return void NOTHING RETURNS
  *
  */
 void showCar(eAuto vehiculos, eMarcas marca[], int tamMarca, eColor colores[], int tamColor);
@@ -90,7 +90,7 @@ void showCar(eAuto vehiculos, eMarcas marca[], int tamMarca, eColor colores[], i
  * \param tamMarca int
  * \param color[] eColor
  * \param tamColor int
- * \return void
+ * \return void nothing returns
  *
  */
 void showCarS(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eColor color[], int tamColor);
@@ -102,7 +102,7 @@ void showCarS(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eC
  * \param tamMarca int
  * \param color[] eColor
  * \param tamColor int
- * \return void
+ * \return void nothing returns
  *
  */
 void sortCars(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eColor color[], int tamColor);
@@ -111,7 +111,7 @@ void sortCars(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eC
  * \param vehiculos[] eAuto
  * \param tamAuto int
  * \param idParametro int
- * \return int
+ * \return void nothing returns
  *
  */
 int searchIDCarEnArray(eAuto vehiculos[], int tamAuto, int idParametro);
@@ -124,7 +124,7 @@ int searchIDCarEnArray(eAuto vehiculos[], int tamAuto, int idParametro);
  * \param tamMarca int
  * \param color[] eColor
  * \param tamColor int
- * \return int
+ * \return int nothing returns
  *
  */
 int removeCar(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eColor color[], int tamColor);
@@ -133,7 +133,7 @@ int removeCar(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eC
  * \param vehiculos[] eAuto
  * \param tamAuto int
  * \param patenteParametro int
- * \return int
+ * \return int index
  *
  */
 int searchCarPatentInArray(eAuto vehiculos[], int tamAuto, int patenteParametro);
@@ -142,7 +142,7 @@ int searchCarPatentInArray(eAuto vehiculos[], int tamAuto, int patenteParametro)
  * \param vehiculos[] eAuto array car
  * \param tamAuto int
 
- * \return int is ok
+ * \return int index
  */
 /** \brief
  *modifies the car data that the user wants
@@ -152,7 +152,7 @@ int searchCarPatentInArray(eAuto vehiculos[], int tamAuto, int patenteParametro)
  * \param tamMarca int
  * \param color[] eColor
  * \param tamColor int
- * \return void
+ * \return void nothing return
  *
  */
 void modifyCar(eAuto vehiculos[], int tamAuto, eMarcas marcas[], int tamMarca, eColor color[], int tamColor);

@@ -25,6 +25,17 @@ typedef struct
 
 #endif // JOB_H_INCLUDED
 
+
+/** \brief this function load ten jobs with they respective parameters
+ *
+ * \param id job
+ * \param id service
+ * \param quantity int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
+ *
+ */
+int harcodearJob(eTrabajo trabajos[], int tamTrabajo, int quantity);
+
 /** \brief
  **brief Register a new job.
   Check for free space.
@@ -40,7 +51,7 @@ typedef struct
  * \param colores[] eColor
  * \param tamC int
  * \param idTrabajo int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int addJob(eTrabajo trabajo[], int tamTrabajo, eAuto autos[], int tamAuto, eServicio servicios[], int tamService, eMarcas marcas[], int t, eColor colores[], int tamC, int idTrabajo);
@@ -50,7 +61,7 @@ eTrabajo cargarTrabajo(int id, int patente, int servicio, eFecha fecha);
   * of each position of the array is 1 in all its positions.
  * \param trabajos[] eTrabajo
  * \param tamTrabajo int
- * \return void
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 
@@ -61,7 +72,7 @@ void initializeJob(eTrabajo trabajos[], int tamTrabajo);
 
  * \param trabajos[] eTrabajo
  * \param tamTrabajo int
- * \return int
+ * \return void no return nothing
  *
  */
 int searchFreeJob(eTrabajo trabajos[], int tamTrabajo);
@@ -71,7 +82,7 @@ int searchFreeJob(eTrabajo trabajos[], int tamTrabajo);
  * \param trabajo eTrabajo
  * \param servicios[] eServicio
  * \param tamService int
- * \return void
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 void showJob(eTrabajo trabajo, eServicio servicios[], int tamService);
@@ -82,7 +93,7 @@ void showJob(eTrabajo trabajo, eServicio servicios[], int tamService);
  * \param tamTrabajo int
  * \param servicios[] eServicio
  * \param tamService int
- * \return int
+ * \return void nothing returns
  *
  */
 /** \brief
@@ -91,7 +102,7 @@ void showJob(eTrabajo trabajo, eServicio servicios[], int tamService);
  * \param tamTrabajo int
  * \param servicios[] eServicio
  * \param tamService int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int showJobS(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamService);

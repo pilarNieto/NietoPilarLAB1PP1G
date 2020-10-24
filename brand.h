@@ -11,17 +11,19 @@ typedef struct
 
 /** \brief / * Load five brands with their respective:
  *
- * \param marcas[] eMarcas
- * \param tamMarca int
+ * \param marcas[] eMarcas struct and array
+ * \param tamMarca int tam array
  * \param quantity int
- * \return int
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 int harcodearBrand(eMarcas marcas[], int tamMarca, int quantity);
 /** \brief Print the one brand passed by parameter on the screen.
  *
  * \param marca eMarcas
- * \return void
+ \param marca eMarcas
+ \param marca eMarcas
+ * \return int Returns [0] if there was an ERROR - [1] All OK.
  *
  */
 void showBrand(eMarcas marca);
@@ -29,17 +31,16 @@ void showBrand(eMarcas marca);
  *
  * \param marca[] eMarcas
  * \param tamMarca int
- * \return void
+ * \return void nothing returns
  *
  */
 void showBrandS(eMarcas marca[], int tamMarca);
-/** \brief Load the Game description.
+/** \brief Load the description in the id for show.
  *
  * \param id int
  * \param marca[] eMarcas
  * \param tamMarca int
  * \param desc[] char
- * \return int
- *
+ * \return int  Returns [0] if there was an ERROR - [1] All OK.
  */
 int showDescriptionBrand(int id, eMarcas marca[], int tamMarca, char desc[]);

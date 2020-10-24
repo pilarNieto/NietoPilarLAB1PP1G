@@ -44,6 +44,7 @@ int main()
     idColor = idColor + harcodearColors(listaColores, TAM_COLOR, 5);
     idAuto = idAuto + harcodearCars(listaAutos, TAM_CAR, 7);
     idServicio = idServicio + harcodearService(listaServicios, TAM_SERVICE, 4);
+    idTrabajo = idTrabajo + harcodearJob(listaTrabajos, TAM_TRABAJO, 10); //------->BONUS TRACK
 
     do
     {
@@ -61,7 +62,7 @@ int main()
                 modifyCar(listaAutos, TAM_CAR, listaMarcas, TAM_BRAND, listaColores, TAM_COLOR);
             } else
                 {
-                    printf("\n*************DAR DE ALTA UN VEHÍCULO POR FAVOR***************\n");
+                    printf("\n*************DAR DE ALTA UN VEHICULO POR FAVOR***************\n");
                 }
             break;
         case 'c':
@@ -97,7 +98,8 @@ int main()
             showServiceS(listaServicios, TAM_SERVICE);
             break;
         case 'h':
-            if(addJob(listaTrabajos, TAM_TRABAJO, listaAutos, TAM_CAR, listaServicios, TAM_SERVICE, listaMarcas, TAM_BRAND, listaColores, TAM_COLOR, idTrabajo))
+            if(addJob(listaTrabajos, TAM_TRABAJO, listaAutos, TAM_CAR, listaServicios
+                      , TAM_SERVICE, listaMarcas, TAM_BRAND, listaColores, TAM_COLOR, idTrabajo))
             {
                 idTrabajo++;
             }
@@ -105,6 +107,11 @@ int main()
         case 'i':
             system("cls");
             showJobS(listaTrabajos, TAM_TRABAJO, listaServicios, TAM_SERVICE);
+            break;
+        case 'j':
+            system("cls");
+            showPrincipalReports(listaAutos, TAM_CAR, listaColores, TAM_COLOR, listaMarcas, TAM_BRAND
+                                , listaTrabajos, TAM_TRABAJO, listaServicios, TAM_SERVICE);
             break;
         case 'z':
             printf("Confirmar salida (s/n): ");
